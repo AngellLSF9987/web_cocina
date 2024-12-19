@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Editar Proveedor{% endblock %}
+
+{% block content %}
+<h2>Editar Proveedor</h2>
+<form method="POST" action="{{ url_for('routes.editar_proveedor', proveedor_id=proveedor.id) }}">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" value="{{ proveedor.nombre }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" name="email" value="{{ proveedor.email }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" value="{{ proveedor.telefono }}">
+    </div>
+    <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="direccion" name="direccion" value="{{ proveedor.direccion }}">
+    </div>
+    <div class="mb-3">
+        <label for="contacto" class="form-label">Persona de Contacto</label>
+        <input type="text" class="form-control" id="contacto" name="contacto" value="{{ proveedor.contacto }}">
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+    <a href="{{ url_for('routes.lista_proveedores') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

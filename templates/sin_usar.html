@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Panel del Cliente</h2>
+    <p>Bienvenido, {{ session.user_email }}.</p>
+
+
+<div class="container mt-5">
+    {% include '/cliente/cliente_perfil.html'%}
+</div>
+{% endblock %}
+
+
+{% elif session.user_role == 'trabajador' %}
+<!-- Opciones para Trabajadores -->
+<li class="nav-item"><a class="nav-link" href="{{ url_for('routes.trabajador.gestion_clientes') }}">Gestión de Clientes</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('routes.trabajador.gestion_productos') }}">Gestión de Productos</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('routes.trabajador.reportes') }}">Reportes</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('routes.trabajador.perfil') }}">Perfil</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('routes.trabajador_lista_productos') }}">Productos</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('routes.trabajador_lista_categorias') }}">Categorías</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('routes.servicio') }}">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ url_for('routes.contacto') }}">Contacto</a></li>

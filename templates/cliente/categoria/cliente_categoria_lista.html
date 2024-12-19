@@ -1,0 +1,46 @@
+
+{% block title %}Lista de Categorías{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Lista de Categorías</h2>
+
+    <!-- Botón para agregar una nueva categoría -->
+    <div class="text-end mb-3">
+        {% include '/cliente/categoria/cliente_categoria_nueva.html' %}
+    </div>
+
+    <!-- Tabla de categorías -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre de Categoría</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for categoria in categorias %}
+            <tr>
+                <td>{{ categoria.id_categoria }}</td> <!-- ID de la categoría -->
+                <td>{{ categoria.nombre_categoria }}</td> <!-- Nombre de la categoría -->
+                <td>{{ categoria.descripcion }}</td> <!-- Descripción de la categoría -->
+                <td>{{ categoria.imagen }}</td> <!-- Imagen de la categoría -->
+                <td>
+                    <!-- Botón para ver los detalles de la categoría -->
+                    <a href="{{ url_for('routes.detalle_categoria', categoria_id=categoria.id_categoria) }}" class="btn btn-info btn-sm">Ver Detalles</a>
+
+                    <!-- Botón para editar la categoría -->
+                    <a href="{{ url_for('routes.editar_categoria', categoria_id=categoria.id_categoria) }}" class="btn btn-warning btn-sm">Editar</a>
+
+                    <!-- Botón para eliminar la categoría (modal o confirmación previa) -->
+                    <a href="{{ url_for('routes.eliminar_categoria', categoria_id=categoria.id_categoria) }}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar esta categoría?');">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

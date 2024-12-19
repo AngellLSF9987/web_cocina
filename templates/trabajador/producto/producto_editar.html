@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle del Producto{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Detalle del Producto</h2>
+
+    <div class="row">
+        <!-- Columna de la imagen del producto -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/' + producto.imagen) }}" class="card-img-top" alt="{{ producto.nombre_producto }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ producto.nombre_producto }}</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna de los detalles del producto -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ producto.nombre_producto }}</h5>
+                    
+                    <p class="card-text">
+                        <strong>Descripción:</strong> {{ producto.descripcion }}
+                    </p>
+                    <p class="card-text">
+                        <strong>Precio:</strong> ${{ producto.precio }}
+                    </p>
+                    <p class="card-text">
+                        <strong>Categoría:</strong> {{ categoria.nombre_categoria }}
+                    </p>
+                    
+                    <!-- Botón para volver -->
+                    <a href="{{ url_for('routes.trabajador_lista_productos') }}" class="btn btn-secondary">Volver a la lista de productos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

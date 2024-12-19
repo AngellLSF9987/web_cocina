@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Panel del Cliente</h2>
+    <p>Bienvenido, {{ session.user_email }}.</p>
+
+
+<div class="container mt-5">
+    {% include '/cliente/cliente_perfil.html'%}
+</div>
+{% endblock %}
