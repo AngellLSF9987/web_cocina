@@ -1,14 +1,14 @@
 import os
 import sys
 import logging
-import mysql.connector
-from flask import Flask
+from flask import Flask, g
 from controllers.categoria_controller import categoria_bp
 from routes.auth_routes import auth_routes
 from routes.routes import routes
 from config import Config
 from database.db_connection import ConexionDB  # Importación ConexionDB
-from database.db_setup import inicializar_base_datos  # Importación la función de configuración de base de datos
+from database.db_setup import inicializar_base_datos  # Importación de la función de configuración de base de datos
+from database.db_connection import cerrar_conexion  # Importación para cerrar la conexión
 
 # Configuración del logger
 def setup_logger():
@@ -38,30 +38,28 @@ def create_app():
     app.register_blueprint(routes)
     logger.info("Blueprints registrados correctamente.")
 
-    # Intentar conectar a la base de datos
-    try:
-        # db_config = Config.MYSQL_CONFIG
-        db_config = {
-            "host": "localhost",
-            "user": "angelpaco",
-            "password": "angelpaco",
-            "database": "cocina_db"
-        }
+    # Definir un "before_request" para crear la conexión
+    @app.before_request
+    def cargar_conexion():
+        """Se ejecuta antes de cada solicitud para crear la conexión"""
+        logger.debug("Estableciendo la conexión con la base de datos...")
+        from database.db_connection import crear_conexion  # Importamos la función de conexión
+        g.conexion = crear_conexion()  # Usamos g para manejar la conexión
 
-        logger.info(f"Configuración de conexión: {db_config}")
-        logger.debug(f"db_config: {db_config}")  # Esto te permitirá ver si los valores son correctos
+        # Inicializar la base de datos si es necesario
+        try:
+            inicializar_base_datos(g.conexion)
+            logger.info("Base de datos inicializada correctamente.")
+        except Exception as e:
+            logger.error(f"Error al inicializar la base de datos: {e}")
 
-        # Establecer la conexión con la base de datos
-        # with ConexionDB(db_config['host'], db_config['user'], db_config['password'], db_config['database']) as conexion:
-        with ConexionDB() as conexion:
-            logger.info("Conexión establecida con la base de datos.")
-            # Inicializar la base de datos si es necesario
-            inicializar_base_datos(conexion)
-
-    except mysql.connector.Error as db_error:
-        logger.error(f"Error de MySQL: {db_error}")
-    except Exception as e:
-        logger.error(f"Error al inicializar la base de datos: {e}")
+    # Definir un "teardown_request" para cerrar la conexión después de cada solicitud
+    @app.teardown_request
+    def cerrar(error=None):
+        """Se ejecuta después de cada solicitud para cerrar la conexión."""
+        logger.debug("Cerrando la conexión a la base de datos...")
+        from database.db_connection import cerrar_conexion  # Llamamos a la función de cierre de conexión
+        cerrar_conexion()  # Llamamos a la función que cierra la conexión de la base de datos
 
     return app
 
@@ -83,3 +81,4 @@ if __name__ == "__main__":
             logger.error("La aplicación Flask no se pudo crear.")
     except Exception as e:
         logger.exception("Error crítico al iniciar la aplicación Flask:")
+
