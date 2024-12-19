@@ -30,7 +30,7 @@ def autenticar_usuario(email, password):
                         cliente = repositorio_cliente.obtener_cliente_por_id(usuario["id_usuario"])
                         if cliente:
                             print(f"🧑‍🍳 Cliente encontrado: {cliente['nombre_cliente']}")
-                            return {"usuario": cliente["nombre_cliente"], "rol": "cliente"}
+                            return {"usuario": cliente["nombre_cliente"], "rol": "autenticado"}
 
                     elif nombre_rol.lower() == "trabajador":
                         repositorio_trabajador = RepositorioTrabajador(conexion)

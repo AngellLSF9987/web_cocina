@@ -1,17 +1,15 @@
 import os
 from werkzeug.utils import secure_filename
-from routes.auth_routes import access_required 
-from flask import (Blueprint, render_template, redirect, url_for, request, flash,
-                   current_app)
+from flask import (Blueprint, render_template, redirect, url_for, request, flash, session, 
+                   current_app, g)
+from routes.auth_routes import access_required
 from database.db_connection import ConexionDB
-from models.categoria import Categoria
 from repositories.repositorio_producto import RepositorioProducto
 from repositories.repositorio_categoria import RepositorioCategoria
 from repositories.repositorio_rol import RepositorioRol
 from repositories.repositorio_cliente import RepositorioCliente
 from repositories.repositorio_proveedor import RepositorioProveedor
 from repositories.repositorio_usuario import RepositorioUsuario
-# from repositories.repositorio_trabajador import RepositorioTrabajador
 from config import Config
 import logging
 
@@ -30,14 +28,13 @@ repo_categoria = RepositorioCategoria(db)
 repo_cliente = RepositorioCliente(db)
 repo_proveedor = RepositorioProveedor(db)
 repo_usuario = RepositorioUsuario(db)
-# repo_trabajador = RepositorioTrabajador(db)
 repo_rol = RepositorioRol(db)
-
 
 # Seguridad para archivos subidos
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "gif"}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 @routes.route("/")
 def index():
@@ -117,9 +114,6 @@ def cliente_eliminar_producto(id_producto):
         logger.exception("Error al eliminar el producto.")
         flash("No se pudo eliminar el producto.", "error")
     return redirect(url_for("routes.cliente_lista_productos"))
-
-
-# Rutas CRUD Categoria - Cliente
 
 # Ruta de contacto
 @routes.route('/contacto/contacto', methods=['GET', 'POST'])

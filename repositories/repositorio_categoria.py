@@ -1,26 +1,21 @@
-import logging
 from database.db_connection import ConexionDB
-from mysql.connector import Error as MySQL_Error
-
+import mysql.connector
 class RepositorioCategoria:
     def __init__(self, conexion=None):
         """Recibe una conexión ya establecida o la crea."""
         self.conexion = conexion or ConexionDB()
-        self.logger = logging.getLogger(__name__)  # Usar logger para los mensajes
 
     def obtener_categoria_por_id(self, id_categoria):
         """Obtiene una categoría por su ID."""
         try:
             cursor = self.conexion.cursor()
-            cursor.execute("SELECT * FROM Categoria WHERE id_categoria = %s", (id_categoria,))
+            cursor.execute("SELECT * FROM Categoria WHERE id_categoria = ?", (id_categoria,))
             categoria = cursor.fetchone()
             if not categoria:
-                self.logger.warning(f"No se encontró ninguna categoría con ID {id_categoria}.")
+                print(f"⚠️ No se encontró ninguna categoría con ID {id_categoria}.")
             return categoria
-        except MySQL_Error as e:
-            self.logger.error(f"Error en la consulta MySQL: {e}")
         except Exception as e:
-            self.logger.error(f"Error general: {e}")
+            print(f"❌ Error al obtener la categoría por ID: {e}")
         finally:
             cursor.close()
 
@@ -31,12 +26,10 @@ class RepositorioCategoria:
             cursor.execute("SELECT * FROM Categoria")
             categorias = cursor.fetchall()
             if not categorias:
-                self.logger.warning("No hay categorías registradas.")
+                print("⚠️ No hay categorías registradas.")
             return categorias
-        except MySQL_Error as e:
-            self.logger.error(f"Error en la consulta MySQL: {e}")
         except Exception as e:
-            self.logger.error(f"Error general: {e}")
+            print(f"❌ Error al obtener las categorías: {e}")
         finally:
             cursor.close()
 
@@ -46,14 +39,12 @@ class RepositorioCategoria:
             cursor = self.conexion.cursor()
             cursor.execute("""
                 INSERT INTO Categoria (nombre_categoria, descripcion, imagen)
-                VALUES (%s, %s, %s)
+                VALUES (?, ?, ?)
             """, (nombre_categoria, descripcion, imagen))
             self.conexion.commit()
-            self.logger.info(f"Categoría '{nombre_categoria}' insertada con éxito.")
-        except MySQL_Error as e:
-            self.logger.error(f"Error en la consulta MySQL: {e}")
+            print(f"✔️ Categoría '{nombre_categoria}' insertada con éxito.")
         except Exception as e:
-            self.logger.error(f"Error general: {e}")
+            print(f"❌ Error al insertar la categoría: {e}")
         finally:
             cursor.close()
 
@@ -63,18 +54,16 @@ class RepositorioCategoria:
             cursor = self.conexion.cursor()
             cursor.execute("""
                 UPDATE Categoria
-                SET nombre_categoria = %s, descripcion = %s, imagen = %s
-                WHERE id_categoria = %s
+                SET nombre_categoria = ?, descripcion = ?, imagen = ?
+                WHERE id_categoria = ?
             """, (nombre_categoria, descripcion, imagen, id_categoria))
             if cursor.rowcount == 0:
-                self.logger.warning(f"No se encontró ninguna categoría con ID {id_categoria} para actualizar.")
+                print(f"⚠️ No se encontró ninguna categoría con ID {id_categoria} para actualizar.")
             else:
                 self.conexion.commit()
-                self.logger.info(f"Categoría con ID {id_categoria} actualizada con éxito.")
-        except MySQL_Error as e:
-            self.logger.error(f"Error en la consulta MySQL: {e}")
+                print(f"✔️ Categoría con ID {id_categoria} actualizada con éxito.")
         except Exception as e:
-            self.logger.error(f"Error general: {e}")
+            print(f"❌ Error al actualizar la categoría: {e}")
         finally:
             cursor.close()
 
@@ -82,15 +71,13 @@ class RepositorioCategoria:
         """Elimina una categoría por su ID."""
         try:
             cursor = self.conexion.cursor()
-            cursor.execute("DELETE FROM Categoria WHERE id_categoria = %s", (id_categoria,))
+            cursor.execute("DELETE FROM Categoria WHERE id_categoria = ?", (id_categoria,))
             if cursor.rowcount == 0:
-                self.logger.warning(f"No se encontró ninguna categoría con ID {id_categoria} para eliminar.")
+                print(f"⚠️ No se encontró ninguna categoría con ID {id_categoria} para eliminar.")
             else:
                 self.conexion.commit()
-                self.logger.info(f"Categoría con ID {id_categoria} eliminada con éxito.")
-        except MySQL_Error as e:
-            self.logger.error(f"Error en la consulta MySQL: {e}")
+                print(f"✔️ Categoría con ID {id_categoria} eliminada con éxito.")
         except Exception as e:
-            self.logger.error(f"Error general: {e}")
+            print(f"❌ Error al eliminar la categoría: {e}")
         finally:
             cursor.close()

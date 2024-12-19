@@ -1,6 +1,6 @@
 from flask import Blueprint, request, render_template, redirect, url_for, flash
 from repositories.repositorio_categoria import RepositorioCategoria
-from routes.auth_routes import access_required
+
 
 # Crear el Blueprint para manejar las rutas de categorías
 categoria_bp = Blueprint('categoria_bp', __name__)
@@ -41,9 +41,11 @@ def obtener_detalle_categoria(id_categoria):
         flash(f'Error al obtener los detalles de la categoría: {str(e)}', 'error')
         return redirect(url_for('categoria_bp.obtener_todas_las_categorias'))
 
+#==== Rutas CRUD Categoria - Cliente ====#
+
 # Ruta para crear una categoría
 @categoria_bp.route('/nueva', methods=['GET', 'POST'])
-@access_required(role="autenticado")
+# @access_required(role="autenticado")
 def crear_categoria():
     if request.method == 'POST':
         nombre = request.form.get('nombre_categoria')
@@ -62,7 +64,7 @@ def crear_categoria():
 
 # Ruta para editar una categoría
 @categoria_bp.route('/<int:id_categoria>/editar', methods=['GET', 'POST'])
-@access_required(role="autenticado")
+# @access_required(role="autenticado")
 def editar_categoria(id_categoria):
     categoria = repo_categoria.obtener_categoria_por_id(id_categoria)
 
@@ -83,7 +85,7 @@ def editar_categoria(id_categoria):
 
 # Ruta para eliminar una categoría
 @categoria_bp.route('/<int:id_categoria>/eliminar', methods=['POST'])
-@access_required(role="autenticado")
+# @access_required(role="autenticado")
 def eliminar_categoria(id_categoria):
     try:
         repo_categoria.eliminar_categoria(id_categoria)

@@ -30,20 +30,25 @@
                     <!-- Opciones para Usuarios no autenticados -->
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('routes.cliente_pedidos') }}">Mis Pedidos</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('routes.cliente_lista_productos') }}">Productos</a></li>
-                    <li class="nav-item"><a href="{{ url_for('categoria_bp.cliente_lista_categorias') }}">Categorías</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('categoria_bp.cliente_lista_categorias') }}">Categorías</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('routes.servicio') }}">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('routes.contacto') }}">Contacto</a></li>
                 {% endif %}
             </ul>
 
+            <!-- Depuración: Mostrar el valor de session.user_role 
+            <span class="navbar-text">
+                Rol actual: {{ session.get('user_role', 'No disponible') }}
+            </span>
+                    -->
             <!-- Menú de autenticación -->
             <ul class="navbar-nav">
                 {% if session.user_role %}
                     <!-- Usuario autenticado -->
                     <li class="nav-item">
-                    <!--    <span class="navbar-text me-2">     -->
+                     <span class="nav-link">    
                             Bienvenido, {{ session.user_email }}
-                    <!--    </span>     -->
+                      </span> 
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-danger" href="{{ url_for('auth_routes.logout') }}">Cerrar Sesión</a>
