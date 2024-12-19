@@ -30,7 +30,8 @@ web_cocina/
 |   └── venta.py 
 ├── controllers/
 |   ├── __init__.py
-|   └── auth_controllerpy # Controlador de acceso en función de rol de usuario, que tomará referencias de respositorio_cliente o repositorio_trabajador.
+|   ├── categoria_controller.py
+|   └── auth_controller.py # Controlador de acceso en función de rol de usuario, que tomará referencias de respositorio_cliente o repositorio_trabajador.
 ├── repositories/
 |   ├── __init__.py
 |   ├── repositorio_carrito.py
@@ -38,9 +39,9 @@ web_cocina/
 |   ├── repositorio_cliente.py
 |   ├── repositorio_producto.py
 |   ├── repositorio_proveedor.py
+|   ├── repositorio_venta.py
 |   ├── repositorio_rol.py
-|   ├── repositorio_trabajador.py
-|   └── repositorio_venta.py
+|   └── repositorio_trabajador.py
 ├── routes/ 
 |   ├── __init__.py
 |   └── routes.py # Script manejador de rutas. 
@@ -221,6 +222,8 @@ templates/
 │       └── producto_detalle.html
 │   └── categoria/  # Subdirectorio para templates de categorías
 │       ├── categoria_lista.html
+│       ├── categoria_detalle.html
+│       ├── categoria_nueva.html
 │       └── categoria_editar.html
 │
 ├── error/  # Plantillas para errores de carga o innaccesibilidad
@@ -234,7 +237,8 @@ templates/
 │
 ├── servicios/  # Plantillas para servicios ofrecidos
 │   └── servicios.html
-│
+└── contacto/  # Plantillas para el formulario de contacto
+│    └── contacto.html
 ├── trabajador/  # Plantillas para el trabajador
 │   ├── trabajador_dashboard.html
 │   ├── trabajador_gestion_clientes.html
@@ -254,9 +258,6 @@ templates/
 │       ├── proveedor_nuevo.html
 │       ├── proveedor_detalle.html
 │       └── proveedor_editar.html
-│
-└── contacto/  # Plantillas para el formulario de contacto
-    └── contacto.html
 
 
 ## 1. Templates compartidos

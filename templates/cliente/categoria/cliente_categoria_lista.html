@@ -1,46 +1,34 @@
+{% extends 'base.html' %}
 
-{% block title %}Lista de Categorías{% endblock %}
+{% block title %}Lista de Categorías - Cocina Nova{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Lista de Categorías</h2>
-
-    <!-- Botón para agregar una nueva categoría -->
-    <div class="text-end mb-3">
-        {% include '/cliente/categoria/cliente_categoria_nueva.html' %}
+    <h2>Lista de Categorías</h2>
+    <div class="mb-4">
+        <a href="{{ url_for('categoria_bp.crear_categoria') }}" class="btn btn-success">Añadir Nueva Categoría</a>
     </div>
-
-    <!-- Tabla de categorías -->
-    <table class="table table-striped">
+    <table class="table">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre de Categoría</th>
+                <th>Nombre</th>
                 <th>Descripción</th>
-                <th>Imagen</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             {% for categoria in categorias %}
-            <tr>
-                <td>{{ categoria.id_categoria }}</td> <!-- ID de la categoría -->
-                <td>{{ categoria.nombre_categoria }}</td> <!-- Nombre de la categoría -->
-                <td>{{ categoria.descripcion }}</td> <!-- Descripción de la categoría -->
-                <td>{{ categoria.imagen }}</td> <!-- Imagen de la categoría -->
-                <td>
-                    <!-- Botón para ver los detalles de la categoría -->
-                    <a href="{{ url_for('routes.detalle_categoria', categoria_id=categoria.id_categoria) }}" class="btn btn-info btn-sm">Ver Detalles</a>
-
-                    <!-- Botón para editar la categoría -->
-                    <a href="{{ url_for('routes.editar_categoria', categoria_id=categoria.id_categoria) }}" class="btn btn-warning btn-sm">Editar</a>
-
-                    <!-- Botón para eliminar la categoría (modal o confirmación previa) -->
-                    <a href="{{ url_for('routes.eliminar_categoria', categoria_id=categoria.id_categoria) }}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar esta categoría?');">Eliminar</a>
-                </td>
-            </tr>
+                <tr>
+                    <td>{{ categoria[0] }}</td>
+                    <td>{{ categoria[1] }}</td>
+                    <td>{{ categoria[2] }}</td>
+                    <td>
+                        <a href="{{ url_for('categoria_bp.detalle_categoria', id_categoria=categoria[0]) }}" class="btn btn-info">Ver</a>
+                        <a href="{{ url_for('categoria_bp.editar_categoria', id_categoria=categoria[0]) }}" class="btn btn-warning">Editar</a>
+                        <a href="{{ url_for('categoria_bp.eliminar_categoria', id_categoria=categoria[0]) }}" class="btn btn-danger">Eliminar</a>
+                    </td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
-</div>
 {% endblock %}

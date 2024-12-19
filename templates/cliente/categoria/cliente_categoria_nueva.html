@@ -1,21 +1,23 @@
-{% block title %}Nueva Categoría{% endblock %}
+{% extends 'base.html' %}
+
+{% block title %}Nueva Categoría - Cocina Nova{% endblock %}
 
 {% block content %}
-<h2>Crear Nueva Categoría</h2>
-<form method="POST" action="{{ url_for('routes.nueva_categoria') }}" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre de la Categoría</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce el nombre" required>
-    </div>
-    <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripción</label>
-        <textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="Introduce una descripción"></textarea>
-    </div>
-    <div class="mb-3">
-        <label for="imagen" class="form-label">Imagen</label>
-        <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-    <a href="{{ url_for('routes.cliente_lista_categorias') }}" class="btn btn-secondary">Cancelar</a>
-</form>
+    <h2>Añadir Nueva Categoría</h2>
+    <form method="POST" action="{{ url_for('categoria_bp.crear_categoria') }}" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="nombre_categoria" class="form-label">Nombre de la Categoría</label>
+            <input type="text" class="form-control" id="nombre_categoria" name="nombre_categoria" required>
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="file" class="form-control" id="imagen" name="imagen">
+        </div>
+        <button type="submit" class="btn btn-primary">Crear Categoría</button>
+        <a href="{{ url_for('categoria_bp.obtener_todas_las_categorias') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
 {% endblock %}

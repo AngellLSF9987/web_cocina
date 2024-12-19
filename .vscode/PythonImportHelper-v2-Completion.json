@@ -16,6 +16,14 @@
         "documentation": {}
     },
     {
+        "label": "RepositorioCliente",
+        "importPath": "repositories.repositorio_cliente",
+        "description": "repositories.repositorio_cliente",
+        "isExtraImport": true,
+        "detail": "repositories.repositorio_cliente",
+        "documentation": {}
+    },
+    {
         "label": "RepositorioTrabajador",
         "importPath": "repositories.repositorio_trabajador",
         "description": "repositories.repositorio_trabajador",
@@ -40,11 +48,11 @@
         "documentation": {}
     },
     {
-        "label": "ConexionDB",
-        "importPath": "database.db_connection",
-        "description": "database.db_connection",
+        "label": "RepositorioUsuario",
+        "importPath": "repositories.repositorio_usuario",
+        "description": "repositories.repositorio_usuario",
         "isExtraImport": true,
-        "detail": "database.db_connection",
+        "detail": "repositories.repositorio_usuario",
         "documentation": {}
     },
     {
@@ -144,126 +152,67 @@
         "documentation": {}
     },
     {
-        "label": "RepositorioCategoria",
-        "importPath": "repositories.repositorio_categoria",
-        "description": "repositories.repositorio_categoria",
+        "label": "ConexionDB",
+        "importPath": "database.db_connection",
+        "description": "database.db_connection",
         "isExtraImport": true,
-        "detail": "repositories.repositorio_categoria",
+        "detail": "database.db_connection",
         "documentation": {}
     },
     {
-        "label": "RepositorioCategoria",
-        "importPath": "repositories.repositorio_categoria",
-        "description": "repositories.repositorio_categoria",
+        "label": "ConexionDB",
+        "importPath": "database.db_connection",
+        "description": "database.db_connection",
         "isExtraImport": true,
-        "detail": "repositories.repositorio_categoria",
+        "detail": "database.db_connection",
         "documentation": {}
     },
     {
-        "label": "mysql.connector",
-        "kind": 6,
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
         "isExtraImport": true,
-        "importPath": "mysql.connector",
-        "description": "mysql.connector",
-        "detail": "mysql.connector",
+        "detail": "flask",
         "documentation": {}
     },
     {
-        "label": "Error",
-        "importPath": "mysql.connector",
-        "description": "mysql.connector",
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
         "isExtraImport": true,
-        "detail": "mysql.connector",
+        "detail": "flask",
         "documentation": {}
     },
     {
-        "label": "logging",
-        "kind": 6,
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
         "isExtraImport": true,
-        "importPath": "logging",
-        "description": "logging",
-        "detail": "logging",
+        "detail": "flask",
         "documentation": {}
     },
     {
-        "label": "Config",
-        "importPath": "config",
-        "description": "config",
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
         "isExtraImport": true,
-        "detail": "config",
+        "detail": "flask",
         "documentation": {}
     },
     {
-        "label": "Config",
-        "importPath": "config",
-        "description": "config",
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
         "isExtraImport": true,
-        "detail": "config",
+        "detail": "flask",
         "documentation": {}
     },
     {
-        "label": "Config",
-        "importPath": "config",
-        "description": "config",
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
         "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "Config",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
-        "label": "Carrito",
-        "importPath": "models.carrito",
-        "description": "models.carrito",
-        "isExtraImport": true,
-        "detail": "models.carrito",
-        "documentation": {}
-    },
-    {
-        "label": "RepositorioRol",
-        "importPath": "repositories.repositorio_rol",
-        "description": "repositories.repositorio_rol",
-        "isExtraImport": true,
-        "detail": "repositories.repositorio_rol",
-        "documentation": {}
-    },
-    {
-        "label": "RepositorioRol",
-        "importPath": "repositories.repositorio_rol",
-        "description": "repositories.repositorio_rol",
-        "isExtraImport": true,
-        "detail": "repositories.repositorio_rol",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "secure_filename",
-        "importPath": "werkzeug.utils",
-        "description": "werkzeug.utils",
-        "isExtraImport": true,
-        "detail": "werkzeug.utils",
-        "documentation": {}
-    },
-    {
-        "label": "wraps",
-        "importPath": "functools",
-        "description": "functools",
-        "isExtraImport": true,
-        "detail": "functools",
+        "detail": "flask",
         "documentation": {}
     },
     {
@@ -339,6 +288,62 @@
         "documentation": {}
     },
     {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "Flask",
         "importPath": "flask",
         "description": "flask",
@@ -347,19 +352,190 @@
         "documentation": {}
     },
     {
+        "label": "RepositorioCategoria",
+        "importPath": "repositories.repositorio_categoria",
+        "description": "repositories.repositorio_categoria",
+        "isExtraImport": true,
+        "detail": "repositories.repositorio_categoria",
+        "documentation": {}
+    },
+    {
+        "label": "RepositorioCategoria",
+        "importPath": "repositories.repositorio_categoria",
+        "description": "repositories.repositorio_categoria",
+        "isExtraImport": true,
+        "detail": "repositories.repositorio_categoria",
+        "documentation": {}
+    },
+    {
+        "label": "access_required",
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "isExtraImport": true,
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "access_required",
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "isExtraImport": true,
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "auth_routes",
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "isExtraImport": true,
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "Carrito",
+        "importPath": "models.carrito",
+        "description": "models.carrito",
+        "isExtraImport": true,
+        "detail": "models.carrito",
+        "documentation": {}
+    },
+    {
+        "label": "RepositorioRol",
+        "importPath": "repositories.repositorio_rol",
+        "description": "repositories.repositorio_rol",
+        "isExtraImport": true,
+        "detail": "repositories.repositorio_rol",
+        "documentation": {}
+    },
+    {
+        "label": "RepositorioRol",
+        "importPath": "repositories.repositorio_rol",
+        "description": "repositories.repositorio_rol",
+        "isExtraImport": true,
+        "detail": "repositories.repositorio_rol",
+        "documentation": {}
+    },
+    {
+        "label": "RepositorioRol",
+        "importPath": "repositories.repositorio_rol",
+        "description": "repositories.repositorio_rol",
+        "isExtraImport": true,
+        "detail": "repositories.repositorio_rol",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "secure_filename",
+        "importPath": "werkzeug.utils",
+        "description": "werkzeug.utils",
+        "isExtraImport": true,
+        "detail": "werkzeug.utils",
+        "documentation": {}
+    },
+    {
+        "label": "secure_filename",
+        "importPath": "werkzeug.utils",
+        "description": "werkzeug.utils",
+        "isExtraImport": true,
+        "detail": "werkzeug.utils",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
         "label": "autenticar_usuario",
         "importPath": "controllers.auth_controller",
         "description": "controllers.auth_controller",
         "isExtraImport": true,
         "detail": "controllers.auth_controller",
-        "documentation": {}
-    },
-    {
-        "label": "CategoriaController",
-        "importPath": "controllers.categoria_controller",
-        "description": "controllers.categoria_controller",
-        "isExtraImport": true,
-        "detail": "controllers.categoria_controller",
         "documentation": {}
     },
     {
@@ -393,6 +569,14 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "categoria_bp",
+        "importPath": "controllers.categoria_controller",
+        "description": "controllers.categoria_controller",
+        "isExtraImport": true,
+        "detail": "controllers.categoria_controller",
         "documentation": {}
     },
     {
@@ -445,11 +629,74 @@
         "documentation": {}
     },
     {
-        "label": "CategoriaController",
-        "kind": 6,
+        "label": "obtener_todas_las_categorias",
+        "kind": 2,
         "importPath": "controllers.categoria_controller",
         "description": "controllers.categoria_controller",
-        "peekOfCode": "class CategoriaController:\n    repo_categoria = RepositorioCategoria()\n    @staticmethod\n    def obtener_todas_las_categorias(repo_categoria):\n        return repo_categoria.obtener_todas_las_categorias()\n    @staticmethod\n    def crear_categoria(repo_categoria, nombre, descripcion, imagen=None):\n        if not nombre or not descripcion:\n            raise ValueError(\"El nombre y la descripción son obligatorios.\")\n        return repo_categoria.insertar_categoria(nombre, descripcion, imagen)",
+        "peekOfCode": "def obtener_todas_las_categorias():\n    try:\n        categorias = repo_categoria.obtener_todas_las_categorias()\n        return render_template('cliente_categoria_lista.html', categorias=categorias)\n    except Exception as e:\n        flash(f'Error al obtener las categorías: {str(e)}', 'error')\n        return redirect(url_for('categoria_bp.obtener_todas_las_categorias'))\n@categoria_bp.route('/lista_categorias')\ndef cliente_lista_categorias():\n    try:",
+        "detail": "controllers.categoria_controller",
+        "documentation": {}
+    },
+    {
+        "label": "cliente_lista_categorias",
+        "kind": 2,
+        "importPath": "controllers.categoria_controller",
+        "description": "controllers.categoria_controller",
+        "peekOfCode": "def cliente_lista_categorias():\n    try:\n        categorias = repo_categoria.obtener_todas_las_categorias()\n        return render_template('cliente_categoria_lista.html', categorias=categorias)\n    except Exception as e:\n        flash(f'Error al obtener las categorías: {str(e)}', 'error')\n        return redirect(url_for('categoria_bp.cliente_lista_categorias'))\n# Ruta para obtener los detalles de una categoría\n@categoria_bp.route('/<int:id_categoria>', methods=['GET'])\ndef obtener_detalle_categoria(id_categoria):",
+        "detail": "controllers.categoria_controller",
+        "documentation": {}
+    },
+    {
+        "label": "obtener_detalle_categoria",
+        "kind": 2,
+        "importPath": "controllers.categoria_controller",
+        "description": "controllers.categoria_controller",
+        "peekOfCode": "def obtener_detalle_categoria(id_categoria):\n    try:\n        categoria = repo_categoria.obtener_categoria_por_id(id_categoria)\n        if categoria:\n            return render_template('categoria_detalle.html', categoria=categoria)\n        else:\n            flash('Categoría no encontrada.', 'error')\n            return redirect(url_for('categoria_bp.obtener_todas_las_categorias'))\n    except Exception as e:\n        flash(f'Error al obtener los detalles de la categoría: {str(e)}', 'error')",
+        "detail": "controllers.categoria_controller",
+        "documentation": {}
+    },
+    {
+        "label": "crear_categoria",
+        "kind": 2,
+        "importPath": "controllers.categoria_controller",
+        "description": "controllers.categoria_controller",
+        "peekOfCode": "def crear_categoria():\n    if request.method == 'POST':\n        nombre = request.form.get('nombre_categoria')\n        descripcion = request.form.get('descripcion')\n        imagen = request.files.get('imagen')\n        try:\n            repo_categoria.insertar_categoria(nombre, descripcion, imagen)\n            flash('Categoría creada con éxito.', 'success')\n            return redirect(url_for('categoria_bp.obtener_todas_las_categorias'))\n        except Exception as e:",
+        "detail": "controllers.categoria_controller",
+        "documentation": {}
+    },
+    {
+        "label": "editar_categoria",
+        "kind": 2,
+        "importPath": "controllers.categoria_controller",
+        "description": "controllers.categoria_controller",
+        "peekOfCode": "def editar_categoria(id_categoria):\n    categoria = repo_categoria.obtener_categoria_por_id(id_categoria)\n    if request.method == 'POST':\n        nombre = request.form.get('nombre_categoria')\n        descripcion = request.form.get('descripcion')\n        imagen = request.files.get('imagen')\n        try:\n            repo_categoria.actualizar_categoria(id_categoria, nombre, descripcion, imagen)\n            flash('Categoría actualizada con éxito.', 'success')\n            return redirect(url_for('categoria_bp.obtener_detalle_categoria', id_categoria=id_categoria))",
+        "detail": "controllers.categoria_controller",
+        "documentation": {}
+    },
+    {
+        "label": "eliminar_categoria",
+        "kind": 2,
+        "importPath": "controllers.categoria_controller",
+        "description": "controllers.categoria_controller",
+        "peekOfCode": "def eliminar_categoria(id_categoria):\n    try:\n        repo_categoria.eliminar_categoria(id_categoria)\n        flash('Categoría eliminada con éxito.', 'success')\n        return redirect(url_for('categoria_bp.obtener_todas_las_categorias'))\n    except Exception as e:\n        flash(f'Error al eliminar la categoría: {str(e)}', 'error')\n        return redirect(url_for('categoria_bp.obtener_todas_las_categorias'))",
+        "detail": "controllers.categoria_controller",
+        "documentation": {}
+    },
+    {
+        "label": "categoria_bp",
+        "kind": 5,
+        "importPath": "controllers.categoria_controller",
+        "description": "controllers.categoria_controller",
+        "peekOfCode": "categoria_bp = Blueprint('categoria_bp', __name__)\n# Instanciamos el repositorio\nrepo_categoria = RepositorioCategoria()\n# Ruta para obtener todas las categorías\n@categoria_bp.route('/')\ndef obtener_todas_las_categorias():\n    try:\n        categorias = repo_categoria.obtener_todas_las_categorias()\n        return render_template('cliente_categoria_lista.html', categorias=categorias)\n    except Exception as e:",
+        "detail": "controllers.categoria_controller",
+        "documentation": {}
+    },
+    {
+        "label": "repo_categoria",
+        "kind": 5,
+        "importPath": "controllers.categoria_controller",
+        "description": "controllers.categoria_controller",
+        "peekOfCode": "repo_categoria = RepositorioCategoria()\n# Ruta para obtener todas las categorías\n@categoria_bp.route('/')\ndef obtener_todas_las_categorias():\n    try:\n        categorias = repo_categoria.obtener_todas_las_categorias()\n        return render_template('cliente_categoria_lista.html', categorias=categorias)\n    except Exception as e:\n        flash(f'Error al obtener las categorías: {str(e)}', 'error')\n        return redirect(url_for('categoria_bp.obtener_todas_las_categorias'))",
         "detail": "controllers.categoria_controller",
         "documentation": {}
     },
@@ -602,7 +849,7 @@
         "kind": 6,
         "importPath": "repositories.repositorio_categoria",
         "description": "repositories.repositorio_categoria",
-        "peekOfCode": "class RepositorioCategoria:\n    def __init__(self, conexion=None):\n        \"\"\"Recibe una conexión ya establecida o la crea.\"\"\"\n        self.conexion = conexion or ConexionDB()\n    def obtener_categoria_por_id(self, id_categoria):\n        \"\"\"Obtiene una categoría por su ID.\"\"\"\n        try:\n            cursor = self.conexion.cursor()\n            cursor.execute(\"SELECT * FROM Categoria WHERE id_categoria = ?\", (id_categoria,))\n            categoria = cursor.fetchone()",
+        "peekOfCode": "class RepositorioCategoria:\n    def __init__(self, conexion=None):\n        \"\"\"Recibe una conexión ya establecida o la crea.\"\"\"\n        self.conexion = conexion or ConexionDB()\n        self.logger = logging.getLogger(__name__)  # Usar logger para los mensajes\n    def obtener_categoria_por_id(self, id_categoria):\n        \"\"\"Obtiene una categoría por su ID.\"\"\"\n        try:\n            cursor = self.conexion.cursor()\n            cursor.execute(\"SELECT * FROM Categoria WHERE id_categoria = %s\", (id_categoria,))",
         "detail": "repositories.repositorio_categoria",
         "documentation": {}
     },
@@ -690,10 +937,100 @@
     {
         "label": "access_required",
         "kind": 2,
-        "importPath": "routes.routes",
-        "description": "routes.routes",
-        "peekOfCode": "def access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            if \"user_role\" not in session:\n                flash(\"Por favor, inicia sesión.\", \"warning\")\n                return redirect(url_for(\"routes.login\"))\n            if role and session.get(\"user_role\") != role:\n                logger.warning(f\"Acceso denegado. Rol requerido: {role}\")\n                flash(\"No tienes permisos para acceder a esta página.\", \"danger\")",
-        "detail": "routes.routes",
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "def access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            if \"user_role\" not in session:\n                flash(\"Por favor, inicia sesión.\", \"warning\")\n                return redirect(url_for(\"auth_routes.login\"))\n            if role and session.get(\"user_role\") != role:\n                logger.warning(f\"Acceso denegado. Rol requerido: {role}\")\n                flash(\"No tienes permisos para acceder a esta página.\", \"danger\")",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "role_redirect",
+        "kind": 2,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "def role_redirect(role):\n    role_map = {\n        \"autenticado\": \"auth_routes.login\",  # Aquí puedes ajustar según la lógica real\n        \"trabajador\": \"auth_routes.login\"   # Esto también\n    }\n    return role_map.get(role, \"auth_routes.login\")\n# Ruta de login\n@auth_routes.route(\"/login\", methods=[\"GET\", \"POST\"])\ndef login():\n    if request.method == \"POST\":",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "def login():\n    if request.method == \"POST\":\n        email = request.form.get(\"email\")\n        password = request.form.get(\"password\")\n        if not email or not password:\n            flash(\"Ingresa tu correo y contraseña.\", \"warning\")\n            return render_template(\"auth/login.html\")\n        usuario = autenticar_usuario(email, password)\n        if usuario:\n            try:",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "def logout():\n    session.clear()\n    flash(\"Has cerrado sesión.\", \"info\")\n    return redirect(url_for(\"auth_routes.login\"))\n# Ruta de reset password\n@auth_routes.route('/reset_password', methods=['GET', 'POST'])\ndef reset_password():\n    # Lógica para el restablecimiento de la contraseña\n    return render_template('auth/reset_password.html')",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password",
+        "kind": 2,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "def reset_password():\n    # Lógica para el restablecimiento de la contraseña\n    return render_template('auth/reset_password.html')",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# Blueprint\nauth_routes = Blueprint(\"auth_routes\", __name__)\n# Instancia de ConexionDB\ndb = ConexionDB()\n# Repositorios\nrepo_cliente = RepositorioCliente(db)\nrepo_usuario = RepositorioUsuario(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "auth_routes",
+        "kind": 5,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "auth_routes = Blueprint(\"auth_routes\", __name__)\n# Instancia de ConexionDB\ndb = ConexionDB()\n# Repositorios\nrepo_cliente = RepositorioCliente(db)\nrepo_usuario = RepositorioUsuario(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "db = ConexionDB()\n# Repositorios\nrepo_cliente = RepositorioCliente(db)\nrepo_usuario = RepositorioUsuario(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "repo_cliente",
+        "kind": 5,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "repo_cliente = RepositorioCliente(db)\nrepo_usuario = RepositorioUsuario(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            if \"user_role\" not in session:\n                flash(\"Por favor, inicia sesión.\", \"warning\")",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "repo_usuario",
+        "kind": 5,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "repo_usuario = RepositorioUsuario(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            if \"user_role\" not in session:\n                flash(\"Por favor, inicia sesión.\", \"warning\")\n                return redirect(url_for(\"auth_routes.login\"))",
+        "detail": "routes.auth_routes",
+        "documentation": {}
+    },
+    {
+        "label": "repo_rol",
+        "kind": 5,
+        "importPath": "routes.auth_routes",
+        "description": "routes.auth_routes",
+        "peekOfCode": "repo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            if \"user_role\" not in session:\n                flash(\"Por favor, inicia sesión.\", \"warning\")\n                return redirect(url_for(\"auth_routes.login\"))\n            if role and session.get(\"user_role\") != role:",
+        "detail": "routes.auth_routes",
         "documentation": {}
     },
     {
@@ -701,43 +1038,7 @@
         "kind": 2,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "def allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS\n# Rutas\ndef role_redirect(role):\n    role_map = {\n        \"autenticado\": \"routes.index\",\n        \"trabajador\": \"routes.index\"\n    }\n    return role_map.get(role, \"routes.index\")\n@routes.route(\"/login\", methods=[\"GET\", \"POST\"])",
-        "detail": "routes.routes",
-        "documentation": {}
-    },
-    {
-        "label": "role_redirect",
-        "kind": 2,
-        "importPath": "routes.routes",
-        "description": "routes.routes",
-        "peekOfCode": "def role_redirect(role):\n    role_map = {\n        \"autenticado\": \"routes.index\",\n        \"trabajador\": \"routes.index\"\n    }\n    return role_map.get(role, \"routes.index\")\n@routes.route(\"/login\", methods=[\"GET\", \"POST\"])\ndef login():\n    if request.method == \"POST\":\n        email = request.form.get(\"email\")",
-        "detail": "routes.routes",
-        "documentation": {}
-    },
-    {
-        "label": "login",
-        "kind": 2,
-        "importPath": "routes.routes",
-        "description": "routes.routes",
-        "peekOfCode": "def login():\n    if request.method == \"POST\":\n        email = request.form.get(\"email\")\n        password = request.form.get(\"password\")\n        if not email or not password:\n            flash(\"Ingresa tu correo y contraseña.\", \"warning\")\n            return render_template(\"auth/login.html\")\n        # Usa la función autenticar_usuario del controlador\n        usuario = autenticar_usuario(email, password)\n        if usuario:",
-        "detail": "routes.routes",
-        "documentation": {}
-    },
-    {
-        "label": "logout",
-        "kind": 2,
-        "importPath": "routes.routes",
-        "description": "routes.routes",
-        "peekOfCode": "def logout():\n    session.clear()\n    flash(\"Has cerrado sesión.\", \"info\")\n    return redirect(url_for(\"routes.index\"))\n@routes.route('/reset_password', methods=['GET', 'POST'])\ndef reset_password():\n    # Lógica para el restablecimiento de la contraseña\n    return render_template('auth/reset_password.html')\n@routes.route(\"/\")\ndef index():",
-        "detail": "routes.routes",
-        "documentation": {}
-    },
-    {
-        "label": "reset_password",
-        "kind": 2,
-        "importPath": "routes.routes",
-        "description": "routes.routes",
-        "peekOfCode": "def reset_password():\n    # Lógica para el restablecimiento de la contraseña\n    return render_template('auth/reset_password.html')\n@routes.route(\"/\")\ndef index():\n    return render_template(\"index.html\")\n# Rutas para cliente\n@routes.route('/cliente/pedidos')\n@access_required(role=\"autenticado\")\ndef cliente_pedidos():",
+        "peekOfCode": "def allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS\n@routes.route(\"/\")\ndef index():\n    return render_template(\"index.html\")\n# Rutas para cliente\n@routes.route('/cliente/pedidos')\n@access_required(role=\"autenticado\")\ndef cliente_pedidos():\n    return render_template('cliente/cliente_pedidos.html')",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -809,25 +1110,7 @@
         "kind": 2,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "def cliente_eliminar_producto(id_producto):\n    try:\n        repo_producto.eliminar_producto(id_producto)\n        flash(\"Producto eliminado exitosamente.\", \"success\")\n    except Exception as e:\n        logger.exception(\"Error al eliminar el producto.\")\n        flash(\"No se pudo eliminar el producto.\", \"error\")\n    return redirect(url_for(\"routes.cliente_lista_productos\"))\n# Rutas CRUD Categoria - Cliente\n@routes.route(\"/cliente/categoria/lista\")",
-        "detail": "routes.routes",
-        "documentation": {}
-    },
-    {
-        "label": "cliente_lista_categorias",
-        "kind": 2,
-        "importPath": "routes.routes",
-        "description": "routes.routes",
-        "peekOfCode": "def cliente_lista_categorias():\n    try:\n        categorias = repo_categoria.obtener_todas_las_categorias()\n        return render_template('cliente/categoria/cliente_categoria_lista.html', categorias=categorias)\n    except Exception as e:\n        logger.exception(\"Error al obtener la lista de categorías.\")\n        flash(\"Error al cargar categorías.\", \"error\")\n        return redirect(url_for(\"routes.index\"))\n@routes.route(\"/cliente/categoria/nueva\", methods=[\"POST\"])\n@access_required(role=\"autenticado\")",
-        "detail": "routes.routes",
-        "documentation": {}
-    },
-    {
-        "label": "nueva_categoria",
-        "kind": 2,
-        "importPath": "routes.routes",
-        "description": "routes.routes",
-        "peekOfCode": "def nueva_categoria():\n    try:\n        nombre = request.form.get('nombre')\n        descripcion = request.form.get('descripcion')\n        imagen = request.files.get('imagen')\n        CategoriaController.crear_categoria(nombre, descripcion, imagen)\n        flash('Categoría creada exitosamente.', 'success')\n    except ValueError as e:\n        flash(str(e), 'error')\n    except Exception as e:",
+        "peekOfCode": "def cliente_eliminar_producto(id_producto):\n    try:\n        repo_producto.eliminar_producto(id_producto)\n        flash(\"Producto eliminado exitosamente.\", \"success\")\n    except Exception as e:\n        logger.exception(\"Error al eliminar el producto.\")\n        flash(\"No se pudo eliminar el producto.\", \"error\")\n    return redirect(url_for(\"routes.cliente_lista_productos\"))\n# Rutas CRUD Categoria - Cliente\n# Ruta de contacto",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -917,7 +1200,7 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "db = ConexionDB()\n# Repositorios\nrepo_producto = RepositorioProducto(db)\nrepo_categoria = RepositorioCategoria(db)\nrepo_cliente = RepositorioCliente(db)\nrepo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados",
+        "peekOfCode": "db = ConexionDB()\n# Repositorios\nrepo_producto = RepositorioProducto(db)\nrepo_categoria = RepositorioCategoria(db)\nrepo_cliente = RepositorioCliente(db)\nrepo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Seguridad para archivos subidos",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -926,7 +1209,7 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "repo_producto = RepositorioProducto(db)\nrepo_categoria = RepositorioCategoria(db)\nrepo_cliente = RepositorioCliente(db)\nrepo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):",
+        "peekOfCode": "repo_producto = RepositorioProducto(db)\nrepo_categoria = RepositorioCategoria(db)\nrepo_cliente = RepositorioCliente(db)\nrepo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Seguridad para archivos subidos\nALLOWED_EXTENSIONS = {\"png\", \"jpg\", \"jpeg\", \"gif\"}\ndef allowed_file(filename):",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -935,7 +1218,7 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "repo_categoria = RepositorioCategoria(db)\nrepo_cliente = RepositorioCliente(db)\nrepo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)",
+        "peekOfCode": "repo_categoria = RepositorioCategoria(db)\nrepo_cliente = RepositorioCliente(db)\nrepo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Seguridad para archivos subidos\nALLOWED_EXTENSIONS = {\"png\", \"jpg\", \"jpeg\", \"gif\"}\ndef allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -944,7 +1227,7 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "repo_cliente = RepositorioCliente(db)\nrepo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):",
+        "peekOfCode": "repo_cliente = RepositorioCliente(db)\nrepo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Seguridad para archivos subidos\nALLOWED_EXTENSIONS = {\"png\", \"jpg\", \"jpeg\", \"gif\"}\ndef allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS\n@routes.route(\"/\")",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -953,7 +1236,7 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "repo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            if \"user_role\" not in session:",
+        "peekOfCode": "repo_proveedor = RepositorioProveedor(db)\nrepo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Seguridad para archivos subidos\nALLOWED_EXTENSIONS = {\"png\", \"jpg\", \"jpeg\", \"gif\"}\ndef allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS\n@routes.route(\"/\")\ndef index():",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -962,7 +1245,7 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "repo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            if \"user_role\" not in session:\n                flash(\"Por favor, inicia sesión.\", \"warning\")",
+        "peekOfCode": "repo_usuario = RepositorioUsuario(db)\n# repo_trabajador = RepositorioTrabajador(db)\nrepo_rol = RepositorioRol(db)\n# Seguridad para archivos subidos\nALLOWED_EXTENSIONS = {\"png\", \"jpg\", \"jpeg\", \"gif\"}\ndef allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS\n@routes.route(\"/\")\ndef index():\n    return render_template(\"index.html\")",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -971,7 +1254,7 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "repo_rol = RepositorioRol(db)\n# Decoradores de autenticación y roles combinados\ndef access_required(role=None):\n    def decorator(f):\n        @wraps(f)\n        def wrapper(*args, **kwargs):\n            if \"user_role\" not in session:\n                flash(\"Por favor, inicia sesión.\", \"warning\")\n                return redirect(url_for(\"routes.login\"))\n            if role and session.get(\"user_role\") != role:",
+        "peekOfCode": "repo_rol = RepositorioRol(db)\n# Seguridad para archivos subidos\nALLOWED_EXTENSIONS = {\"png\", \"jpg\", \"jpeg\", \"gif\"}\ndef allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS\n@routes.route(\"/\")\ndef index():\n    return render_template(\"index.html\")\n# Rutas para cliente\n@routes.route('/cliente/pedidos')",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -980,7 +1263,7 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "ALLOWED_EXTENSIONS = {\"png\", \"jpg\", \"jpeg\", \"gif\"}\ndef allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS\n# Rutas\ndef role_redirect(role):\n    role_map = {\n        \"autenticado\": \"routes.index\",\n        \"trabajador\": \"routes.index\"\n    }\n    return role_map.get(role, \"routes.index\")",
+        "peekOfCode": "ALLOWED_EXTENSIONS = {\"png\", \"jpg\", \"jpeg\", \"gif\"}\ndef allowed_file(filename):\n    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS\n@routes.route(\"/\")\ndef index():\n    return render_template(\"index.html\")\n# Rutas para cliente\n@routes.route('/cliente/pedidos')\n@access_required(role=\"autenticado\")\ndef cliente_pedidos():",
         "detail": "routes.routes",
         "documentation": {}
     },
@@ -998,7 +1281,7 @@
         "kind": 2,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "def create_app():\n    app = Flask(__name__, static_folder='static')\n    # Cargar configuración\n    app.config.from_object(Config)\n    logger.info(\"Configuración de Flask cargada correctamente.\")\n    # Registrar blueprints\n    app.register_blueprint(routes)\n    logger.info(\"Blueprints registrados correctamente.\")\n    # Intentar conectar a la base de datos\n    try:",
+        "peekOfCode": "def create_app():\n    app = Flask(__name__, static_folder='static')\n    # Registrar el blueprint de autenticación\n    app.register_blueprint(categoria_bp, url_prefix='/categoria')\n    app.register_blueprint(auth_routes, url_prefix=\"/auth\")\n    # Cargar configuración\n    app.config.from_object(Config)\n    logger.info(\"Configuración de Flask cargada correctamente.\")\n    # Si tienes otro blueprint para las rutas generales, regístralo también\n    app.register_blueprint(routes)",
         "detail": "app",
         "documentation": {}
     },
@@ -1007,7 +1290,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "logger = setup_logger()\n# Configuración de la aplicación Flask\ndef create_app():\n    app = Flask(__name__, static_folder='static')\n    # Cargar configuración\n    app.config.from_object(Config)\n    logger.info(\"Configuración de Flask cargada correctamente.\")\n    # Registrar blueprints\n    app.register_blueprint(routes)\n    logger.info(\"Blueprints registrados correctamente.\")",
+        "peekOfCode": "logger = setup_logger()\n# Configuración de la aplicación Flask\ndef create_app():\n    app = Flask(__name__, static_folder='static')\n    # Registrar el blueprint de autenticación\n    app.register_blueprint(categoria_bp, url_prefix='/categoria')\n    app.register_blueprint(auth_routes, url_prefix=\"/auth\")\n    # Cargar configuración\n    app.config.from_object(Config)\n    logger.info(\"Configuración de Flask cargada correctamente.\")",
         "detail": "app",
         "documentation": {}
     },

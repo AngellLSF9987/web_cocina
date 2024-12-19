@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalle de Categoría - Cocina Nova{% endblock %}
+
+{% block content %}
+    <h2>Detalle de la Categoría</h2>
+    <div>
+        <h3>{{ categoria[1] }}</h3>
+        <p><strong>Descripción:</strong> {{ categoria[2] }}</p>
+        <img src="{{ categoria[3] }}" alt="Imagen de la categoría" class="img-fluid">
+    </div>
+    <div class="mt-4">
+        <a href="{{ url_for('categoria_bp.editar_categoria', id_categoria=categoria[0]) }}" class="btn btn-warning">Editar</a>
+        <a href="{{ url_for('categoria_bp.eliminar_categoria', id_categoria=categoria[0]) }}" class="btn btn-danger">Eliminar</a>
+        <a href="{{ url_for('categoria_bp.obtener_todas_las_categorias') }}" class="btn btn-secondary">Volver</a>
+    </div>
+{% endblock %}

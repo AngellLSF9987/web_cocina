@@ -3,6 +3,8 @@ import sys
 import logging
 import mysql.connector
 from flask import Flask
+from controllers.categoria_controller import categoria_bp
+from routes.auth_routes import auth_routes
 from routes.routes import routes
 from config import Config
 from database.db_connection import ConexionDB  # Importación ConexionDB
@@ -26,14 +28,17 @@ logger = setup_logger()
 def create_app():
     app = Flask(__name__, static_folder='static')
 
+    # Registrar el blueprint de autenticación
+    app.register_blueprint(categoria_bp, url_prefix='/categoria')
+    app.register_blueprint(auth_routes, url_prefix="/auth")
+
     # Cargar configuración
     app.config.from_object(Config)
     logger.info("Configuración de Flask cargada correctamente.")
 
-    # Registrar blueprints
+    # Si tienes otro blueprint para las rutas generales, regístralo también
     app.register_blueprint(routes)
     logger.info("Blueprints registrados correctamente.")
-
     # Intentar conectar a la base de datos
     try:
         # db_config = Config.MYSQL_CONFIG

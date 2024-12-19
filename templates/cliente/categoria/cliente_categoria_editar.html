@@ -1,31 +1,23 @@
 {% extends 'base.html' %}
 
-{% block title %}Editar Categoría{% endblock %}
+{% block title %}Editar Categoría - Cocina Nova{% endblock %}
 
 {% block content %}
-<h2>Editar Categoría</h2>
-<form method="POST" action="{{ url_for('routes.editar_categoria', categoria_id=categoria.id) }}" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre de la Categoría</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" value="{{ categoria.nombre }}" required>
-    </div>
-    <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripción</label>
-        <textarea class="form-control" id="descripcion" name="descripcion" rows="3">{{ categoria.descripcion }}</textarea>
-    </div>
-    <div class="mb-3">
-        <label for="imagen" class="form-label">Imagen Actual</label>
+    <h2>Editar Categoría</h2>
+    <form method="POST" action="{{ url_for('categoria_bp.actualizar_categoria', id_categoria=categoria[0]) }}" enctype="multipart/form-data">
         <div class="mb-3">
-            {% if categoria.imagen %}
-            <img src="{{ url_for('static', filename='uploads/categorias/' ~ categoria.imagen) }}" alt="{{ categoria.nombre }}" class="img-thumbnail" style="max-width: 200px;">
-            {% else %}
-            <p>No hay imagen disponible para esta categoría.</p>
-            {% endif %}
+            <label for="nombre_categoria" class="form-label">Nombre de la Categoría</label>
+            <input type="text" class="form-control" id="nombre_categoria" name="nombre_categoria" value="{{ categoria[1] }}" required>
         </div>
-        <label for="imagen" class="form-label">Actualizar Imagen</label>
-        <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
-    </div>
-    <button type="submit" class="btn btn-primary">Actualizar</button>
-    <a href="{{ url_for('routes.trabajador_lista_categorias') }}" class="btn btn-secondary">Cancelar</a>
-</form>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" required>{{ categoria[2] }}</textarea>
+        </div>
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen</label>
+            <input type="file" class="form-control" id="imagen" name="imagen">
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar Categoría</button>
+        <a href="{{ url_for('categoria_bp.obtener_todas_las_categorias') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
 {% endblock %}
